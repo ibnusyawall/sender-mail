@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title><%= title %></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container-fluid">
+
+		<blockquote class="blockquote mt-4 text-center">
+			<p class="mb-0"> <%= title %> </p>
+			<footer class="blockquote-footer">stech</footer>
+		</blockquote>
+
+		<form action="/" method="post">
+			<div class="form-group">
+				<label for="host">Host</label>
+				<input name="host" type="text" class="form-control" placeholder="smtp.mailtrap.io">
+			</div>
+			<div class="form-group">
+				<label for="port">Port</label>
+				<input name="port" type="number" class="form-control" placeholder="2525">
+			</div>
+			<div class="form-group">
+				<label for="user">User</label>
+				<input name="user" type="text" class="form-control" placeholder="user">
+			</div>
+			<div class="form-group">
+				<label for="password">Password</label>
+				<input name="pass" type="password" class="form-control" placeholder="*****">
+			</div>
+			<div class="form-group">
+				<label for="from">From</label>
+				<input name="from" type="email" class="form-control" placeholder="b639812a8b-23b319@inbox.mailtrap.io">
+			</div>
+
+			<div class="form-group">
+				<label for="to">To</label>
+				<input name="to" type="email" class="form-control" placeholder="syawal@nesapa.me">
+			</div>
+			<div class="form-group">
+				<label for="subject">Subject</label>
+				<input name="subject" type="text" class="form-control" placeholder="Test Mail Sender">
+			</div>
+			<div class="form-group">
+				<label for="body">Body</label>
+				<input name="body" type="text" class="form-control" placeholder="<h1> Sender Mail</h1>">
+			</div>
+			<button type="submit" class="btn btn-outline-primary">Submit</button>
+		</form>
+		
+		<textarea id="result" class="form-control mt-4 mb-5" style="width:100%; display:block;" spellcheck="false"> <%= data %> </textarea>
+		
+	</div>
+	<script type="text/javascript">
+		function expandTextarea(id) {
+			document.getElementById(id).addEventListener('keyup', function() {
+				this.style.overflow = 'hidden';
+				this.style.height = 0;
+				this.style.height = this.scrollHeight + 'px';
+			}, false);
+		}
+		expandTextarea('result')
+	</script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
